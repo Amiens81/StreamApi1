@@ -18,12 +18,12 @@ public class Main {
 		person.add(new Person("Oksana", 29));
 		person.add(new Person("Oleg", 18));
 		person.add(new Person("Alina", 34));
-		System.out.println("Первый вариант. Список людей старше 30 ");
+		System.out.println("Первый вариант. Люди старше 30 ");
 		person.stream().filter(el -> el.getAge() > 30).forEach( System.out::println);
 		List<Person> personOver30 = person.stream().filter(el -> el.getAge() > 30).collect(Collectors.toList());
-		System.out.println("Второй вариант вывода. Люди старше 30: \n" + personOver30);
+		System.out.println("Второй вариант вывода. Список людей старше 30: \n" + personOver30);
 		List<Person> personOver = person.stream().filter(el -> el.getAge() > 30).toList();
-		System.out.println("Третий вариант вывода. Люди старше 30: \n" + personOver);
+		System.out.println("Третий вариант вывода. Список людей старше 30: \n" + personOver);
 
 	}
 }
